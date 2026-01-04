@@ -89,3 +89,46 @@
 //         return false;
 //     }
 // };
+
+// EXIST FUNCTION WITH EARLY PRUNING
+
+// bool exist(vector<vector<char>> &board, string word) {
+//   int m = board.size();
+//   int n = board[0].size();
+
+//   // PRUNING THE BACKTRACKING BY CHECKING THE COUNTS
+//   // If the board doesn’t contain enough characters required by word,
+//   // don’t even start DFS.
+
+//   unordered_map<char, int> boardCnt;
+//   unordered_map<char, int> wordCnt;
+
+//   // Counts Each Word Frequency in Board
+//   for (auto &row : board) {
+//     for (char c : row) {
+//       boardCnt[c]++;
+//     }
+//   }
+//   // Counts Each Word Frequency in Word
+//   for (char c : word) {
+//     wordCnt[c]++;
+//   }
+
+//   for (auto &[c, cnt] : wordCnt) {
+//     if (boardCnt[c] < cnt) {
+//       return false;
+//     }
+//   }
+
+//   for (int i = 0; i < m; i++) {
+//     for (int j = 0; j < n; j++) {
+//       // Visit Each Character
+//       // If First Character matches then perform backtracking to check
+//       // others
+//       if (board[i][j] == word[0] && find(board, i, j, m, n, 0, word)) {
+//         return true;
+//       }
+//     }
+//   }
+//   return false;
+// }
