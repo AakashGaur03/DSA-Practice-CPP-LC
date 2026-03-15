@@ -59,14 +59,14 @@
 //         }
 
 //         int ans = 0;
-//         queue<pair<TreeNode*, int>> q;
+//         queue<pair<TreeNode*, long long>> q;
 //         q.push({root, 0});
 //         while (!q.empty()) {
 //             int size = q.size();
 //             int mini = q.front().second;
 //             int first, last;
 //             for (int i = 0; i < size; i++) {
-//                 int curr_id = q.front().second - mini;
+//                 long long curr_id = q.front().second - mini;
 //                 TreeNode* node = q.front().first;
 //                 q.pop();
 //                 if (i == 0) {
